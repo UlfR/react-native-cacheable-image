@@ -96,7 +96,7 @@ class CacheableImage extends React.Component {
                 let downloadOptions = {
                     fromUrl: imageUri,
                     toFile: filePath,
-                    background: true,
+                    background: this.props.downloadInBackground,
                     begin: this.imageDownloadBegin,
                     progress: this.imageDownloadProgress
                 };
@@ -270,6 +270,7 @@ CacheableImage.propTypes = {
     ]),
     checkNetwork: React.PropTypes.bool,
     networkAvailable: React.PropTypes.bool
+    downloadInBackground: React.PropTypes.bool
 };
 
 
@@ -281,4 +282,5 @@ CacheableImage.defaultProps = {
     useQueryParamsInCacheKey: false, // bc
     checkNetwork: true,
     networkAvailable: false
+    downloadInBackground: false
 };
