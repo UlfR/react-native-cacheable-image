@@ -269,7 +269,7 @@ CacheableImage.propTypes = {
         React.PropTypes.array
     ]),
     checkNetwork: React.PropTypes.bool,
-    networkAvailable: React.PropTypes.bool
+    networkAvailable: React.PropTypes.bool,
     downloadInBackground: React.PropTypes.bool
 };
 
@@ -281,6 +281,6 @@ CacheableImage.defaultProps = {
     },
     useQueryParamsInCacheKey: false, // bc
     checkNetwork: true,
-    networkAvailable: false
+    networkAvailable: false,
     downloadInBackground: false
 };
